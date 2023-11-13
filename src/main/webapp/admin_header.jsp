@@ -34,7 +34,7 @@ response.setHeader("expire", "0");
 <header class="header-main" >
 		<div class="header-logo">
 			<i class="fa-solid fa-bag-shopping icon"></i>
-			<h2>Groco</h2>
+			<h2>BringIt</h2>
 		</div>
 		<div class="header-nav">
 			<nav>

@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+.content {
+	width: 100%;
+}
 body{
   min-height: 100vh;
   width: 100%;
@@ -13,7 +16,7 @@ body{
 }
 footer{
   
-  background: #140B5C;
+  /* background: #140B5C; */
   width: 100%;
   bottom: 0;
   left: 0;

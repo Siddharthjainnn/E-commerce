@@ -48,10 +48,10 @@
 
 
 					<div class="col-4">
-						<div class="categori-pro">
+						<div class="categori-pro" style="height: 600px;width: 100px;">
 							<div class="box3">
 								<img src="./get_image_all_product?pro_id=<%=mm.getPro_id()%>"
-									class="categ-img" alt="">
+									class="categ-img" alt="" style="height: 270px;width: 270px;padding: 20px;">
 								<div>
 									<h3 class="categ-he"  ><span style="color: red;">PRO ID : <%=mm.getPro_id()%></span></h3>
 									<h1 ><span style="color:black;"><%=mm.getName()%></span></h1>
@@ -59,7 +59,7 @@
 									<h3 ><span style="color:red;">RS.<%=mm.getPrice()%>/-</span></h3>
 								</div>
 								
-								<a href="./add_to_cart_7?pro_id=<%=mm.getPro_id()%>"><input type="button"
+								<a href="./add_to_cart_all_product?pro_id=<%=mm.getPro_id()%>"><input type="button"
 									value="Add To Cart" class="categ-btn"></a>
 							</div>
 </div>

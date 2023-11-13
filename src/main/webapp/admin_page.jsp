@@ -1,3 +1,8 @@
+<%@page import="DTO.deliver_order"%>
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.Collection"%>
+<%@page import="DTO.order_details_for_admin"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -465,7 +470,9 @@ nav .profile-details i{
 
 <%@include file="admin_header.jsp" %>
 
-
+ <%ArrayList<order_details_for_admin> list=(ArrayList<order_details_for_admin>)session.getAttribute("LIST"); %>
+ <%ArrayList<deliver_order> list3=(ArrayList<deliver_order>)session.getAttribute("LIST_2"); %>
+ 
 <%Admin ak=(Admin)session.getAttribute("kk"); %>
 <%if(ak!=null)
 	{%>
@@ -533,17 +540,27 @@ if(lk!=null)
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="get_all_order_for_image_order">
             <i class='bx bx-heart' ></i>
-            <span class="links_name">Favrorites</span>
+            <span class="links_name">Order By Photo</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="billing.jsp">
             <i class='bx bx-cog' ></i>
-            <span class="links_name">Setting</span>
+            <span class="links_name">billing</span>
           </a>
         </li>
+        
+        
+        <li>
+          <a href="Offer_page_ctrl">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Offer_Update</span>
+          </a>
+        </li>
+        
+        
         <li class="adminlogourctrl">
           <a href="logoutctrl">
             <i class='bx bx-log-out'></i>
@@ -567,43 +584,74 @@ if(lk!=null)
       <div class="profile-details">
        <%--  <img src="./get_admin_image_on_dashbord?user_id=<%=aa.getName() %>" alt=""> --%>
         <span class="admin_name"><%=aa.getName() %></span>
-        <i class='bx bx-chevron-down' ></i>
+         <i class="fa-solid fa-circle-up fa-beat-fade"></i>
       </div>
     </nav>
     <div class="home-content">
       <div class="overview-boxes">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Order</div>
-            <div class="number">40,876</div>
+          <%int q=0; %>
+             <% 
+        // Import the necessary Java classes
+        java.util.Date currentDate2 = new java.util.Date();
+        
+        // Create a SimpleDateFormat to format the date as per your requirement
+        java.text.SimpleDateFormat dateFormat2 = new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        
+        // Format the date and print it
+        String formattedDate2 = dateFormat2.format(currentDate2);
+    %>
+    
+            <center>
+            <div class="box-topic">New/Pending Order </div>
+            <div style="color: blue;" class="number" id="xxxxx"></div>
+            </center>
             <div class="indicator">
-              <i class='bx bx-up-arrow-alt'></i>
-              <span class="text">Up from yesterday</span>
+              <i class="fa-solid fa-circle-up fa-beat-fade"></i>
+              <h4 style="color: red;">Untill today(<%=formattedDate2 %>)</h4>
             </div>
           </div>
-         <i class="fa-solid fa-cart-plus fa-2xl"></i>
+          <% 
+        // Import the necessary Java classes
+        java.util.Date currentDate = new java.util.Date();
+        
+        // Create a SimpleDateFormat to format the date as per your requirement
+        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        
+        // Format the date and print it
+        String formattedDate = dateFormat.format(currentDate);
+    %>
+    
+    
+       <!--   <i class="fa-solid fa-cart-plus fa-2xl"></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Sales</div>
-            <div class="number">38,876</div>
+            <center>
+            <div class="box-topic">Deliverd order</div>
+            <div class="number" id="x2" style="color: green;"></div>
+            </center>
             <div class="indicator">
-              <i class="fa-solid fa-circle-up"></i>
-              <span class="text">Up from yesterday</span>
+              <i class="fa-solid fa-circle-up fa-beat-fade"></i>
+              <h4 style="color: red;">Until today (<%= formattedDate %>)</h4>
             </div>
           </div>
-       <i class="fa-solid fa-cart-plus fa-2xl"></i>
+       <!-- <i class="fa-solid fa-cart-plus fa-2xl"></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Profit</div>
-            <div class="number">$12,876</div>
+           <center>
+            <div class="box-topic">Total New/Pending Order Amount</div>
+            <div class="number" id="x11"></div>
+           </center>
+            
             <div class="indicator">
-              <i class='bx bx-up-arrow-alt'></i>
-              <span class="text">Up from yesterday</span>
+               <i class="fa-solid fa-circle-up fa-beat-fade"></i>
+               <h4 style="color: red;">Untill today(<%=formattedDate2 %>)</h4>
             </div>
           </div>
-          <i class="fa-solid fa-cart-plus fa-2xl"></i>
+          
         </div>
         <div class="box">
           <div class="right-side">
@@ -617,120 +665,162 @@ if(lk!=null)
           <i class="fa-solid fa-cart-plus fa-2xl"></i>
         </div>
       </div>
-      <div class="sales-boxes">
-        <div class="recent-sales box">
+      
+      
+      
+      <div class="sales-boxes" style="height: auto;">
+        <div class="recent-sales box" style="height: auto;">
           <div class="title">Recent Sales</div>
           <div class="sales-details">
             <ul class="details">
               <li class="topic">Date</li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
+              <%Collections.sort(list); %>
+                <hr>
+                
+               <%for(order_details_for_admin ml:list){ %>
+              <li style="font-weight: 1000;color: green;"><%=ml.getDate() %></li>
+              <%q++; %>
+              
+              <%} %> 
+            <input type="hidden" id="xxx" value="<%=q%>">
             </ul>
             <ul class="details">
-            <li class="topic">Customer</li>
-            <li><a href="#">Alex Doe</a></li>
-            <li><a href="#">David Mart</a></li>
-            <li><a href="#">Roe Parter</a></li>
-            <li><a href="#">Diana Penty</a></li>
-            <li><a href="#">Martin Paw</a></li>
-            <li><a href="#">Doe Alex</a></li>
-            <li><a href="#">Aiana Lexa</a></li>
-            <li><a href="#">Rexel Mags</a></li>
-             <li><a href="#">Tiana Loths</a></li>
+            <li class="topic">Customer Id</li>
+              <hr>
+            <%for(order_details_for_admin ml:list){ %>
+            
+              <li style="font-weight: 1000;color: purple;"><%=ml.getOrder_id() %></li>
+              <%} %> 
+           
           </ul>
           <ul class="details">
-            <li class="topic">Sales</li>
-            <li><a href="#">Delivered</a></li>
-            <li><a href="#">Pending</a></li>
-            <li><a href="#">Returned</a></li>
-            <li><a href="#">Delivered</a></li>
-            <li><a href="#">Pending</a></li>
-            <li><a href="#">Returned</a></li>
-            <li><a href="#">Delivered</a></li>
-             <li><a href="#">Pending</a></li>
-            <li><a href="#">Delivered</a></li>
+            <li class="topic">Order Id</li>
+            <hr>
+            <%for(order_details_for_admin ml:list){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=ml.getCustomer_id() %></li>
+              <%} %> 
           </ul>
           <ul class="details">
-            <li class="topic">Total</li>
-            <li><a href="#">$204.98</a></li>
-            <li><a href="#">$24.55</a></li>
-            <li><a href="#">$25.88</a></li>
-            <li><a href="#">$170.66</a></li>
-            <li><a href="#">$56.56</a></li>
-            <li><a href="#">$44.95</a></li>
-            <li><a href="#">$67.33</a></li>
-             <li><a href="#">$23.53</a></li>
-             <li><a href="#">$46.52</a></li>
+            <li class="topic">Amount</li>
+              <hr>
+              <%double totalPrice = 0.0;%>
+              <%double totalPrice_2 = 0.0;%>
+            <%for(order_details_for_admin ml:list){ %>
+              <li style="font-weight: 1000;color: red;">Rs. <%=ml.getDynamicValue() %></li>
+              <%totalPrice_2 = Double.parseDouble(ml.getDynamicValue() ); %>
+              <%totalPrice = totalPrice + totalPrice_2; %>
+              <%} %> 
+          </ul>
+          <input type="hidden" id="x10" value=<%=totalPrice %>>
+          <%-- <h1><%=totalPrice %></h1> --%>
+          <ul class="details">
+            <li class="topic">View</li>
+              <hr>
+            <%for(order_details_for_admin ml:list){ %>
+            
+              <li><a href="particular_order_for_admin?order_id=<%=ml.getCustomer_id()%>&customer_id=<%=ml.getOrder_id()%>" class="btn btn-danger">View</a></li>
+              <%} %> 
           </ul>
           </div>
           <div class="button">
-            <a href="#">See All</a>
+            <a href="view_admin_order_details">See All</a>
           </div>
         </div>
-        <div class="top-sales box">
+        
+        <%-- <div class="top-sales box">
           <div class="title">Top Seling Product</div>
           <ul class="top-sales-details">
-            <li>
-            <a href="#">
-              <img src="images/sunglasses.jpg" alt="">
-              <span class="product">Vuitton Sunglasses</span>
-            </a>
-            <span class="price">$1107</span>
-          </li>
-          <li>
-            <a href="#">
-               <img src="images/jeans.jpg" alt="">
-              <span class="product">Hourglass Jeans </span>
-            </a>
-            <span class="price">$1567</span>
-          </li>
-          <li>
-            <a href="#">
-             <img src="images/nike.jpg" alt="">
-              <span class="product">Nike Sport Shoe</span>
-            </a>
-            <span class="price">$1234</span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/scarves.jpg" alt="">
-              <span class="product">Hermes Silk Scarves.</span>
-            </a>
-            <span class="price">$2312</span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/blueBag.jpg" alt="">
-              <span class="product">Succi Ladies Bag</span>
-            </a>
-            <span class="price">$1456</span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/bag.jpg" alt="">
-              <span class="product">Gucci Womens's Bags</span>
-            </a>
-            <span class="price">$2345</span>
-          <li>
-            <a href="#">
-              <img src="images/addidas.jpg" alt="">
-              <span class="product">Addidas Running Shoe</span>
-            </a>
-            <span class="price">$2345</span>
-          </li>
-<li>
-            <a href="#">
-             <img src="images/shirt.jpg" alt="">
-              <span class="product">Bilack Wear's Shirt</span>
-            </a>
-            <span class="price">$1245</span>
-          </li>
+          <li class="topic">Customer Id</li>
+          <hr>
+          <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getCustomer_id() %></li>
+              <%} %> 
+              </ul>
+              <ul class="top-sales-details">
+          <li class="topic">Order Id</li>
+          <hr>
+              <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getOrder_id() %></li>
+              <%} %> 
+              </ul>
+              <ul class="top-sales-details">
+          <li class="topic">Date Of Order</li>
+          <hr>
+               
+               
+               
+              <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getDate() %></li>
+              <%} %> 
+              </ul>
+              
+              <ul class="top-sales-details">
+          <li class="topic">Status</li>
+          <hr>
+               
+              <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getStatus() %></li>
+              <%} %> 
+            </ul>
+         
+         
           </ul>
+        </div> --%>
+        <!-- <div class="sales-boxes" style="height: auto;"> -->
+        <!-- <div class="recent-sales box" style="height: auto;"> -->
+        <div class="top-sales box" style="height: auto;">
+          <div class="title">Deliverd Sales</div>
+          <!-- <div class="title">Recent Sales</div> -->
+          <div class="sales-details">
+            <ul class="details">
+            <%int qq=0; %>
+              <li class="topic">Customer Id</li>
+              <%-- <%Collections.sort(list); %>
+ --%>                <hr>
+                
+                        <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getCustomer_id() %></li>
+              <%qq++; %>
+              <%} %> 
+             <input type="hidden" id="xxxx" value="<%=qq%>">
+            </ul>
+            
+          <ul class="details">
+            <li class="topic">Order Id</li>
+            <hr>
+<%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: green;"><%=mmm.getOrder_id() %></li>
+              <%} %>           </ul>
+              
+              <ul class="details">
+            <li class="topic">Date Of Order</li>
+              <hr>
+           <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: threedlightshadow;"><%=mmm.getDate() %></li>
+              <%} %> 
+           
+          </ul>
+              
+          <ul class="details">
+            <li class="topic">Status</li>
+              <hr>
+              
+            <%for(deliver_order mmm:list3){ %>
+              <li style="font-weight: 1000;color: red;"><%=mmm.getStatus() %></li>
+              <%} %> 
+          </ul>
+          <ul class="details">
+            <li class="topic">View</li>
+              <hr>
+            <%for(deliver_order mmm:list3){ %>
+            
+              <li><a href="particular_order_for_admin?order_id=<%=mmm.getOrder_id()%>&customer_id=<%=mmm.getCustomer_id()%>" class="btn btn-danger">View</a></li>
+              <%} %> 
+          </ul>
+          </div>
+          <div class="button">
+            <a href="view_total_order_deliverd">See All</a>
+          </div>
         </div>
       </div>
     </div>
@@ -746,6 +836,21 @@ sidebarBtn.onclick = function() {
   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
  </script>
-
+<script>
+	var status=document.getElementById("xxx").value;
+	console.log(status);
+	let total_order_no_50 = document.getElementById("xxxxx").innerText=status;
+	console.log(total_order_no_50)
+	var status2=document.getElementById("xxxx").value;
+	console.log(status2);
+	let total_order_no_51 = document.getElementById("x2").innerText=status2;
+	console.log(total_order_no_51)
+	
+	
+	var status3=document.getElementById("x10").value;
+	console.log(status3);
+	let total_order_no_55 = document.getElementById("x11").innerText=status3;
+	console.log(total_order_no_55)
+	</script>
 </body>
 </html>

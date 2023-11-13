@@ -218,7 +218,11 @@ a {
     
     <form id="myForm" action="confirm_order_bt_admin" method="post">
   <span id="order_no_09" style="display: none;"></span> <!-- This is the span containing the dynamic value -->
+  
+  
+ 
   <input type="hidden" id="dynamicValueInput" name="order_id">
+  
   <input type="submit"  value="CONFIRM" class="btn btn-success">
 </form>
 

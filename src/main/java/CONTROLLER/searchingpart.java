@@ -236,13 +236,32 @@ else if(inputsearch.equals("DAILY ESSENTIAL")||inputsearch.equals("dAILY ESSENTI
 	
 	
 	
-		RequestDispatcher rd=request.getRequestDispatcher("home.jsp");
-		request.setAttribute("msg", "category/item not found");
-		rd.forward(request, response);
+//		RequestDispatcher rd=request.getRequestDispatcher("home.jsp");
+//		request.setAttribute("msg", "category/item not found");
+//		rd.forward(request, response);
+		
+		
+
+		//ArrayList<Product> list=model.get_all_product();
+		ArrayList<Product> list=model.get_all_product_like(inputsearch);
+		if(list!=null)
+		{
+			RequestDispatcher rd=request.getRequestDispatcher("all_product.jsp");
+			request.setAttribute("LIST", list);
+			rd.forward(request, response);
+		}else {
+			RequestDispatcher rd=request.getRequestDispatcher("all_product.jsp");
+			request.setAttribute("LIST", "msg not available");
+			rd.forward(request, response);
+		}
+
+	}
+		
+		
 	
 
 }
 	}
 	
 
-}
+

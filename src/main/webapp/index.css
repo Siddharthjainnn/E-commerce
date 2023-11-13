@@ -312,7 +312,7 @@ body{
     align-items: center;
 }
 .home .home-content{
-    /* border: 2px solid red; */
+     
     position: relative;
     
     width: 50%;
@@ -457,8 +457,8 @@ body{
 .product-section{
     background-color: #e7e5e5;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width:100%;
+    /* align-items: center; */
     
 }
 

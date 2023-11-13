@@ -23,6 +23,7 @@ public class get_delete_soap extends HttpServlet {
 		String a=(String)request.getParameter("user_id");
 		admin_model model=new admin_model();
 	int i=	model.delete_soap(a);
+	int j=model.delete_product(a);
 	ArrayList<Product> list=model.get_prosoap_admin();
 	if(i!=0)
 	{

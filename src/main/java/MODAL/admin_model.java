@@ -15,19 +15,24 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.Part;
 
 import CONTROLLER.ceck_otp;
+import CONTROLLER.confirm_order_bt_admin;
 import DTO.Add_to_cart;
 import DTO.Admin;
 import DTO.Cart_with_final_show;
 import DTO.Product;
+import DTO.billing;
 import DTO.checkoutpage;
 import DTO.customer;
 import DTO.deliver_order;
 import DTO.new_customer_add;
 import DTO.order;
+import DTO.order_by_image_user_2;
 import DTO.order_details_for_admin;
 import DTO.order_no;
+import DTO.product_new;
 
 public class admin_model {
  public static Connection create_connection()
@@ -517,7 +522,7 @@ public ArrayList<Product> get_prosugar_admin() {
 	Connection con=null;
 	try {
 		con=create_connection();
-				PreparedStatement ps=con.prepareStatement("select * from sugar ");
+				PreparedStatement ps=con.prepareStatement("select * from sugar");
 			ResultSet rs=	ps.executeQuery();
 			while(rs.next())
 			{
@@ -3064,7 +3069,948 @@ public byte[] get_all_product_img(String a) {
 }
 
 
+public int add_to_wish_list(String a, String b, String c, String d, String e2) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		
+		PreparedStatement ps =con.prepareStatement("insert into wishlist_1 values(?,?,?,?,?)");
+		/*
+		 * PreparedStatement ps =con.
+		 * prepareStatement("insert into wishlist_1 ADD CONSTRAINT unique_color_per_customer UNIQUE (customer_id, color)"
+		 * );
+		 */
+				
+		ps.setString(1, a);
+		ps.setString(2, b);
+		ps.setString(3, c);
+		ps.setString(4, d);
+		ps.setString(5, e2);
+	i=	ps.executeUpdate();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return i;
 }
+
+
+public int add_update_product_1(String a, String b, String c, String d, double e, InputStream is) {
+	int i=0;
+	Connection con=null;
+	if(c.equals("OIL_GHEE"))
+	{
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+		ps.setString(1, a);
+		ps.setString(2, c);
+		ps.setString(3, d);
+		ps.setDouble(4, e);
+		ps.setBlob(5, is);
+		ps.setString(6, b);
+		
+	i=	ps.executeUpdate();
 	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	}else if (c.equals("sugar & jerry")) {
+		try {
+			con=create_connection();
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+	} else if (c.equals("SOAP & DETERGENT")) {
+		try {
+			con=create_connection();
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("SPICES & MASALA")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into spices values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("ATTA & PARMAL")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into atta values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("DAL & GRAINS")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into DAL values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("SEV & NAMKEEN")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into SEV values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("BISCUITS & CHOCLATE")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into BISCUITS values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("AGARBATTI & POJJA ITEMS")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into AGARBATTI values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("DRY FRUITS")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into DRY values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("DAILY ESSENTIALS")) {
+		try {
+			con=create_connection();
+			//PreparedStatement ps=con.prepareStatement("insert into DAILY values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+	else if (c.equals("DAIRY PRODUCTS")) {
+		try {
+			con=create_connection();
+			
+			PreparedStatement ps=con.prepareStatement("update product set name=?,category=?,quantity=?,price=?,image=? where id=?");
+			ps.setString(1, a);
+			ps.setString(2, c);
+			ps.setString(3, d);
+			ps.setDouble(4, e);
+			ps.setBlob(5, is);
+			ps.setString(6, b);
+			
+		i=	ps.executeUpdate();
+		
+		} catch (Exception e2) {
+			e2.printStackTrace();
+		}
+		
+	}
+
+	return i;
+}
+
+
+public int delete_product(String a) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from product where id=?");
+		ps.setString(1, a);
+		i=ps.executeUpdate();
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return i;
+}
+
+
+public ArrayList<Product> get_wish_list(String a) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select DISTINCT * from wishlist_1 where customer_id=?");
+		ps.setString(1, a);
+	ResultSet rs=	ps.executeQuery();
+	while(rs.next())
+	{
+		Product ll=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getDouble("price"));
+		list.add(ll);
+	}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<Product> add_to_cart_from_wishlist(String a) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+				PreparedStatement ps=con.prepareStatement("select * from product where id=?");
+				ps.setString(1, a);
+			ResultSet rs=	ps.executeQuery();
+			while(rs.next())
+			{
+				Product pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+				list.add(pp);
+			}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<Product> add_to_cart_wishlist(String a) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+				PreparedStatement ps=con.prepareStatement("select * from product where id=?");
+				ps.setString(1, a);
+			ResultSet rs=	ps.executeQuery();
+			while(rs.next())
+			{
+				Product pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+				list.add(pp);
+			}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+public ArrayList<Product> get_all_product_like(String inputsearch) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		//SELECT * FROM your_table WHERE column_name LIKE ?
+		PreparedStatement ps=con.prepareStatement("select * from product where name LIKE ?");
+	
+		//System.out.println("select * from product WHERE name LIKE=?);
+		//ps.setString(1, inputsearch);
+ps.setString(1, "%" + inputsearch + "%");
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			Product pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+			list.add(pp);
+		}
+} catch (Exception e) {
+	e.printStackTrace();
+}
+return list;
+}
+
+
+public int delete_from_wishlist(String z, String pro_id) {
+	int k=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from wishlist_1 where id=? and customer_id=? ");
+		
+		ps.setString(1,pro_id);
+		ps.setString(2,z);
+		
+	k=	ps.executeUpdate();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return k;
+}
+
+
+public int billing_1(String a, String b, String c, String d) {
+int i=0;
+Connection con=null;
+try {
+	con=create_connection();
+	PreparedStatement ps=con.prepareStatement("insert into billing values(?,?,?,?)");
+	ps.setString(1, a);
+	ps.setString(2, b);
+	ps.setString(3, c);
+	ps.setString(4, d);
+	i=ps.executeUpdate();
+} catch (Exception e) {
+	e.printStackTrace();
+}
+	return i;
+}
+
+
+public billing get_billing_information(String b) {
+	billing list=null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from billing where billing_id=?");
+		ps.setString(1, b);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			
+			list=new billing(rs.getString("name"), rs.getString("billing_id"),rs.getString("email_id"), rs.getString("mobile_no"));
+		
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<Product> get_all_product_like_all(String search) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		//SELECT * FROM your_table WHERE column_name LIKE ?
+		PreparedStatement ps=con.prepareStatement("select * from product where id=?");
+	
+		//System.out.println("select * from product WHERE name LIKE=?);
+		//ps.setString(1, inputsearch);
+ps.setString(1, search);
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			Product pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+			list.add(pp);
+		}
+} catch (Exception e) {
+	e.printStackTrace();
+}
+return list;
+}
+
+
+public int add_to_bill_please(String billing_id, String name, String id, String category, String quantity, double e) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("insert into bill_for_dekstop values(?,?,?,?,?,?)");
+		ps.setString(1, billing_id);
+		ps.setString(2, name);
+		ps.setString(3, id);
+		ps.setString(4, category);
+		ps.setString(5, quantity);
+		ps.setDouble(6, e);
+		i=ps.executeUpdate();
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+}
+
+
+public ArrayList<Product> get_all_product_added(String billing_id) {
+	ArrayList<Product> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from bill_for_dekstop where billing_id=?");
+		ps.setString(1, billing_id);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			Product pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+			list.add(pp);
+		}
+	} catch (Exception e) {
+	e.printStackTrace();
+	}
+	return list;
+}
+
+
+public int get_order_by_photo_new(String a, InputStream is,String m, String b, String k, String j, String l) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		
+		PreparedStatement ps=con.prepareStatement("insert into order12 values(?,?,?,?,?,?,?)");
+		ps.setString(1, a);
+		ps.setBlob(2, is);
+		ps.setString(3, m);//
+		ps.setString(4, b);
+		ps.setString(5, k);
+		ps.setString(6,j);
+		ps.setString(7, l);
+		i=ps.executeUpdate();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	
+	return i;
+}
+
+
+
+
+
+public byte[] get_bill_by_img(String a) {
+	byte img[]=null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from order12 where order_id=?");
+		ps.setString(1, a);
+	ResultSet rs=	ps.executeQuery();
+	while(rs.next())
+	{
+		img=rs.getBytes("image");
+	}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return img;
+}
+
+
+
+
+public order_by_image_user_2 get_all_bill_information(String c) {
+	order_by_image_user_2 list =null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from  order11 where order_id=?");
+		
+		ps.setString(1, c);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			
+			list=new order_by_image_user_2(rs.getString("user_id"),rs.getString("order_id"));
+			System.out.println(rs.getString("user_id")+" "+rs.getString("order_id")); 
+			
+			
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public byte[] get_bill_user_id_img(String a) {
+	byte img[]=null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from order12 where order_id=?");
+		ps.setString(1, a);
+	ResultSet rs=	ps.executeQuery();
+	while(rs.next())
+	{
+		img=rs.getBytes("image");
+	}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return img;
+}
+
+
+public ArrayList<order_by_image_user_2> get_order_details_of_particular_customer_by_image(String customer_id) {
+	ArrayList<order_by_image_user_2> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from order12 where user_id=?");
+		ps.setString(1, customer_id);
+	ResultSet rs=	ps.executeQuery();
+	while(rs.next())
+	{
+		
+		order_by_image_user_2 v=new order_by_image_user_2(rs.getString("user_id"),rs.getString("order_id"), rs.getString("name"),rs.getString("dob"));
+		list.add(v);
+	}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+/*
+ * public order_by_image_user_2 order_by_image_user_2_get_all_data(String a,
+ * String b) { order_by_image_user_2 list=null; Connection con=null; try {
+ * con=create_connection(); PreparedStatement ps=con.
+ * prepareStatement("select * from order12 where order_id=? and user_id=?");
+ * 
+ * ps.setString(1, a); ps.setString(2, b);
+ * 
+ * 
+ * System.out.println(a+""+b); ResultSet rs= ps.executeQuery();
+ * System.out.println(rs); //System.out.println("yaha jak done"+customer_id);
+ * while(rs.next()) { System.out.println("rewanshi"); list=new
+ * order_by_image_user_2(rs.getString("user_id"),rs.getString("order_id"),
+ * rs.getString("name"),rs.getString("dob"),rs.getString("email"),rs.getString(
+ * "adress")); System.out.println(rs.getString("order_id")+""+
+ * rs.getString("name"));
+ * 
+ * } } catch (Exception e) { e.printStackTrace(); } return list;
+ * 
+ * }
+ */
+
+
+public order_by_image_user_2 get_all_data(String a, String b) {
+	order_by_image_user_2 list=null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from order12 where order_id=? and user_id=?");
+	
+		ps.setString(1, a);
+		ps.setString(2, b);
+		
+		
+		System.out.println(a+""+b);
+	ResultSet rs=	ps.executeQuery();
+    System.out.println(rs);
+	//System.out.println("yaha jak done"+customer_id);
+	while(rs.next())
+	{
+		System.out.println("rewanshi");
+		 list=new order_by_image_user_2(rs.getString("user_id"),rs.getString("order_id"), rs.getString("name"),rs.getString("dob"),rs.getString("email"),rs.getString("adress"));
+	System.out.println(rs.getString("order_id")+""+ rs.getString("name"));
+	
+	}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+
+}
+
+
+public ArrayList<order_by_image_user_2> get_all_order() {
+	ArrayList<order_by_image_user_2> list=new ArrayList<>();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from order12");
+		ResultSet rs=ps.executeQuery();
+		while(rs.next()) { 
+			//order_by_image_user_2 dd=new order_by_image_user_2(rs.getString("order_id"), rs.getString("customer_id"), rs.getString("date"), rs.getString("status"));
+			order_by_image_user_2 v=new order_by_image_user_2(rs.getString("user_id"),rs.getString("order_id"), rs.getString("name"),rs.getString("dob"),rs.getString("email"),rs.getString("adress")); 
+			
+			
+			list.add(v);
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+
+
+}
+
+
+public Product get_all_product(String a) {
+	Product pp=null;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from product where id=?");
+		ps.setString(1, a);
+	ResultSet rs=	ps.executeQuery();
+	while(rs.next())
+	{
+		pp=new Product(rs.getString("name"), rs.getString("id"), rs.getString("category"), rs.getString("quantity"), rs.getDouble("price"));
+	}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return pp;
+
+}
+
+
+public int add_update_product_offer(String a, String b, String c, String d, double e, double f, String g, String h) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("insert into offer_2 values(?,?,?,?,?,?,?,?)");
+		ps.setString(1, a);
+		ps.setString(2, b);
+		ps.setString(3, c);
+		ps.setString(4, d);
+		ps.setDouble(5, e);
+		ps.setDouble(6, f);
+		ps.setString(7, g);
+		ps.setString(8, h);
+		
+		
+	i=	ps.executeUpdate();
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public int add_update_product_combo(String a, String b, String c, String d, double e, double f, String g, String h) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("insert into combo_2 values(?,?,?,?,?,?,?,?)");
+		ps.setString(1, a);
+		ps.setString(2, b);
+		ps.setString(3, c);
+		ps.setString(4, d);
+		ps.setDouble(5, e);
+		ps.setDouble(6, f);
+		ps.setString(7, g);
+		ps.setString(8, h);
+		
+		
+	i=	ps.executeUpdate();
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public int add_update_product_deal_of_week(String a, String b, String c, String d, double e, double f, String g, String h) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("insert into deal_2 values(?,?,?,?,?,?,?,?)");
+		ps.setString(1, a);
+		ps.setString(2, b);
+		ps.setString(3, c);
+		ps.setString(4, d);
+		ps.setDouble(5, e);
+		ps.setDouble(6, f);
+		ps.setString(7, g);
+		ps.setString(8, h);
+		
+		
+	i=	ps.executeUpdate();
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public int add_update_product_deal_of(String a, String b, String c, String d, double e, double f, String g, String h) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("insert into deal_of_2 values(?,?,?,?,?,?,?,?)");
+		ps.setString(1, a);
+		ps.setString(2, b);
+		ps.setString(3, c);
+		ps.setString(4, d);
+		ps.setDouble(5, e);
+		ps.setDouble(6, f);
+		ps.setString(7, g);
+		ps.setString(8, h);
+		
+		
+	i=	ps.executeUpdate();
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public int delete_product_offer(String a) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from offer_2 where pro_id=?");
+		ps.setString(1, a);
+		i=ps.executeUpdate();
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return i;
+}
+
+public int delete_product_combo(String a) {
+	int i=0;
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from combo_2 where pro_id=?");
+		ps.setString(1, a);
+		i=ps.executeUpdate();
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return i;
+}
+
+public int deleate_deal_of_week(String a) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from deal_2 where pro_id=?");
+		ps.setString(1, a);
+		i=ps.executeUpdate();
+		
+		
+	
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public int deleate_product_deal_of(String a) {
+	int i=0;
+	Connection con=null;
+	
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("delete from deal_of_2 where pro_id=? ");
+		ps.setString(1, a);
+		i=ps.executeUpdate();
+	
+	} catch (Exception e2) {
+		e2.printStackTrace();
+	}
+	return i;
+	}
+
+
+public ArrayList<product_new> get_all_deal() {
+	ArrayList<product_new> list=new ArrayList<>();
+	admin_model model=new admin_model();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from deal_of_2");
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			
+			product_new pp=new product_new(rs.getString("pro_name"), rs.getString("pro_id"), rs.getString("pro_category"), rs.getString("pro_quantity"), rs.getDouble("pro_price"),rs.getDouble("offer_price"),rs.getString("start_date"), rs.getString("end_date"));
+			list.add(pp);
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<product_new> get_all_combo() {
+	ArrayList<product_new> list=new ArrayList<>();
+	admin_model model=new admin_model();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from combo_2");
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			
+			product_new pp=new product_new(rs.getString("pro_name"), rs.getString("pro_id"), rs.getString("pro_category"), rs.getString("pro_quantity"), rs.getDouble("pro_price"),rs.getDouble("offer_price"),rs.getString("start_date"), rs.getString("end_date"));
+			list.add(pp);
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<product_new> get_all_offer() {
+	ArrayList<product_new> list=new ArrayList<>();
+	admin_model model=new admin_model();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from offer_2");
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			
+			product_new pp=new product_new(rs.getString("pro_name"), rs.getString("pro_id"), rs.getString("pro_category"), rs.getString("pro_quantity"), rs.getDouble("pro_price"),rs.getDouble("offer_price"),rs.getString("start_date"), rs.getString("end_date"));
+			list.add(pp);
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+
+
+public ArrayList<product_new> get_all_deal_week() {
+	ArrayList<product_new> list=new ArrayList<>();
+	admin_model model=new admin_model();
+	Connection con=null;
+	try {
+		con=create_connection();
+		PreparedStatement ps=con.prepareStatement("select * from deal_2");
+		ResultSet rs=	ps.executeQuery();
+		while(rs.next())
+		{
+			
+			product_new pp=new product_new(rs.getString("pro_name"), rs.getString("pro_id"), rs.getString("pro_category"), rs.getString("pro_quantity"), rs.getDouble("pro_price"),rs.getDouble("offer_price"),rs.getString("start_date"), rs.getString("end_date"));
+			list.add(pp);
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return list;
+}
+}
+
+
 
 

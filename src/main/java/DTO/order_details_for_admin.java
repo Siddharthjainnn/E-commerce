@@ -1,6 +1,6 @@
 package DTO;
 
-public class order_details_for_admin {
+public class order_details_for_admin implements Comparable<order_details_for_admin> {
 private String customer_id;
 private String order_id;
 private String dynamicValue;
@@ -54,6 +54,11 @@ public order_details_for_admin(String customer_id, String order_id, String dynam
 	this.order_id = order_id;
 	this.dynamicValue = dynamicValue;
 	this.date = date;
+}
+@Override
+public int compareTo(order_details_for_admin o) {
+	
+	return o.getDate().compareTo(this.getDate());
 }
 
 }

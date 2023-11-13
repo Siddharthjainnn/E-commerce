@@ -26,6 +26,7 @@ public class get_update_spices extends HttpServlet {
 		String a=(String)request.getParameter("user_id");
 		admin_model model=new admin_model();
 	Product pp=	model.get_full_spices_admin(a);
+	
 	if(pp!=null)
 	{
 		RequestDispatcher rd=request.getRequestDispatcher("update_page_product_3.jsp");
@@ -47,12 +48,15 @@ public class get_update_spices extends HttpServlet {
 		double e=Double.parseDouble(request.getParameter("price"));
 		Part f=request.getPart("image");
 		InputStream is=null;
+		InputStream js=null;
 		if(f!=null)
 		{
 			is=f.getInputStream();
+			js=f.getInputStream();
 		}
 		admin_model model=new admin_model();
 		int i=model.add_update_product(a,b,c,d,e,is);
+		int j=model.add_update_product_1(a, b, c, d, e, js);
 		ArrayList<Product> list=model.get_prospices_admin();
 		
 		if(i!=0)

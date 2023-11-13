@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DTO.Product;
+import DTO.product_new;
 import MODAL.admin_model;
 
 
@@ -21,14 +22,17 @@ public class oil extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		admin_model model=new admin_model();
 		ArrayList<Product> list=model.get_pro_admin();
+		ArrayList<product_new> list1=model.get_all_deal();
 		if(list!=null)
 		{
 			RequestDispatcher rd=request.getRequestDispatcher("oil&ghee_customer.jsp");
 			request.setAttribute("LIST", list);
+			request.setAttribute("LIST1", list1);
 			rd.forward(request, response);
 		}else {
 			RequestDispatcher rd=request.getRequestDispatcher("oil&ghee_customer.jsp");
 			request.setAttribute("LIST", "msg not available");
+			request.setAttribute("LIST1", list1);
 			rd.forward(request, response);
 		}
 

@@ -23,6 +23,7 @@ public class get_delete_atta extends HttpServlet {
 		String a=(String)request.getParameter("user_id");
 		admin_model model=new admin_model();
 	int i=	model.delete_atta(a);
+	int j=model.delete_product(a);
 	ArrayList<Product> list=model.get_proatta_admin();
 	if(i!=0)
 	{

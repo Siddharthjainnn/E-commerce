@@ -23,6 +23,7 @@ public class get_delete_agarbati extends HttpServlet {
 		String a=(String)request.getParameter("user_id");
 		admin_model model=new admin_model();
 	int i=	model.delete_AGARBATTI(a);
+	int j=model.delete_product(a);
 	ArrayList<Product> list=model.get_proagabatti_admin();
 	if(i!=0)
 	{

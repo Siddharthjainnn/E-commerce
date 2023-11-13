@@ -1,6 +1,7 @@
 package CONTROLLER;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import DTO.Product;
 import DTO.customer;
 import DTO.new_customer_add;
 import MODAL.admin_model;
@@ -32,6 +34,7 @@ public class loginctrl extends HttpServlet {
 		int i = model.login_customer(a, b);
 
 		new_customer_add ok = model.get_customer_login(a, b);
+		ArrayList<Product> kl=model.get_all_product();
 		
 if(ok!=null)
 {
@@ -40,6 +43,7 @@ if(ok!=null)
 			request.setAttribute("kk", ok);		
 			HttpSession session = request.getSession();
 			session.setAttribute("msg", ok);
+			session.setAttribute("LIST", kl);
 }else {
 	RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
 	request.setAttribute("kk", "invallied username or password");	

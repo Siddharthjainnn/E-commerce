@@ -32,7 +32,7 @@ public class review extends HttpServlet {
 //		System.out.println("<html>"+"");
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password="Siddharthjain123@...";
+		String password="Siddharthjain123@...11";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();

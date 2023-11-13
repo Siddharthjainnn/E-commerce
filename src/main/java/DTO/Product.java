@@ -74,6 +74,13 @@ public class Product {
 		this.price = price;
 		this.image=image;
 	}
+	public Product(String name, String pro_id, String category, double price) {
+		super();
+		this.name = name;
+		this.pro_id = pro_id;
+		this.category = category;
+		this.price = price;
+	}
 	
 
 }

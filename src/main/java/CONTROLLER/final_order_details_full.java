@@ -76,6 +76,7 @@ public class final_order_details_full extends HttpServlet {
 	            //checkoutpage ok=new checkoutpage(a, b, c, d, e, f, g, h, i, name, quantity, price); 
 	          int k=model.add_to_final_cart_check_out_page(a, b, c, d, e, f, g, h, i,is,name, quantity, price,z,date,exampleRadios,status);
 	          int y=model.delete_from_cart_on_new_cart_insertion(z, pro_id);
+	          int l=model.delete_from_wishlist(z, pro_id);
 	        }
 	        
 	        

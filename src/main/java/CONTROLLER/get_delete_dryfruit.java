@@ -23,6 +23,7 @@ public class get_delete_dryfruit extends HttpServlet {
 		String a=(String)request.getParameter("user_id");
 		admin_model model=new admin_model();
 	int i=	model.delete_DRY(a);
+	int j=model.delete_product(a);
 	ArrayList<Product> list=model.get_prodryfruit_admin();
 	if(i!=0)
 	{

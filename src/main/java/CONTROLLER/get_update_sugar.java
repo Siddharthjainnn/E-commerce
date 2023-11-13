@@ -46,12 +46,15 @@ public class get_update_sugar extends HttpServlet {
 		double e=Double.parseDouble(request.getParameter("price"));
 		Part f=request.getPart("image");
 		InputStream is=null;
+		InputStream js=null;
 		if(f!=null)
 		{
 			is=f.getInputStream();
+			js=f.getInputStream();
 		}
 		admin_model model=new admin_model();
 		int i=model.add_update_product(a,b,c,d,e,is);
+		int j=model.add_update_product_1(a, b, c, d, e, js);
 		ArrayList<Product> list=model.get_prosugar_admin();
 		
 		if(i!=0)

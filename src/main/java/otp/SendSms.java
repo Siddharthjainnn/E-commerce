@@ -24,6 +24,9 @@ public class SendSms {
 		
 		String route="p";
 		
+		//https://www.fast2sms.com/dev/bulkV2?authorization=tYcE21MPvWyq8jnibpgeNDrdVCZO65o9BQkAz0XhJ4uwGFSm3lqGhinFDKlzadjYvmWgCQAH7BtV6Jw2&route=dlt&sender_id=&message=&variables_values=&flash=0&numbers=
+
+		
 		
 		String myUrl="https://www.fast2sms.com/dev/bulk?authorization="+apiKey+"&sender_id="+sendId+"&message="+message+"&language="+language+"&route="+route+"&numbers="+number;
 		
@@ -72,7 +75,7 @@ public class SendSms {
 		System.out.println("Program started.....");
 		
 		
-		SendSms.sendSms("this message using java code ..."+new Date().toLocaleString(), "9340390344");
+		SendSms.sendSms("this message using java code ..."+new Date().toLocaleString(), "9479455005");
 		
 	}
 }

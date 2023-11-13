@@ -32,7 +32,7 @@ public class otp_send_for_forgooton_password extends HttpServlet {
 		String user_id=request.getParameter("user_id");
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password="Siddharthjain123@...";
+		String password="Siddharthjain123@...11";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();
@@ -61,9 +61,31 @@ public class otp_send_for_forgooton_password extends HttpServlet {
 		  
 		  String otp2 = String.valueOf(otp);
 		  System.out.println(otp);
-		  String msgg=".....WELCOME TO JAIN PROVISION STORE ....."
-		  		+ " YOUR ONE TIME PASSWORD TO CHANGE PASSWORD ::=>  "+otp2;
+		  
+		  
+
+		  
+			
+			
+			  String msgg=".....WELCOME TO JAIN PROVISION STORE ....." +
+			  " YOUR ONE TIME PASSWORD TO CHANGE PASSWORD ::=>  "+otp2;
+			
+			 
 		  System.out.println(otp);
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+			/*
+			 * String msgg= "<html><head><title>My Servlet</title></head><body>" +
+			 * "<h1>Hello from MyServlet</h1>" +
+			 * "<p>This is a simple servlet example. your otp is </p>"+otp2 +
+			 * "</body></html>";
+			 */
 		  
 		  
 		 

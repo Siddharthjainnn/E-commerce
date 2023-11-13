@@ -21,57 +21,73 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
 	crossorigin="anonymous" referrerpolicy="no-referrer">
+	<style>
+	.button-75 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-75:active {
+  outline: 0;
+}
+
+.button-75:hover {
+  outline: 0;
+}
+
+.button-75 span {
+  transition: all 200ms;
+}
+
+.button-75:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+@media screen and (max-width: 991px) {
+  .button-75 {
+    font-size: 15px;
+    height: 50px;
+  }
+
+  .button-75 span {
+    line-height: 50px;
+  }
+}
+	</style>
 </head>
 <body>
+<%@include file="header.jsp" %>
 
 <%
 	new_customer_add list = (new_customer_add) request.getAttribute("LIST");
 
 	%>
 	
-<section class="vh-100" style="background-color: #9de2ff;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-md-9 col-lg-7 col-xl-5">
-        <div class="card" style="border-radius: 15px;">
-          <div class="card-body p-4">
-            <div class="d-flex text-black">
-              <div class="flex-shrink-0">
-                <img src="get_profile_image?user_id=<%=list.getUser_id()%>"
-                  alt="Generic placeholder image" class="img-fluid"
-                  style="width: 180px; border-radius: 10px;">
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <h5 class="mb-1"><%=list.getName()%></h5>
-                <p class="mb-2 pb-1" style="color: #2b2a2a;">Jain provision Customer</p>
-                <div class="d-flex justify-content-start rounded-3 p-2 mb-2"
-                  style="background-color: #efefef;">
-                  <div>
-                    <p class="small text-muted mb-1">Total Order</p>
-                    <p class="mb-0">1</p>
-                  </div>
-                  <div class="px-3">
-                    <p class="small text-muted mb-1">Wallet</p>
-                    <p class="mb-0">0</p>
-                  </div>
-                  <div>
-                    <p class="small text-muted mb-1">Amount Spend</p>
-                    <p class="mb-0">11233/-</p>
-                  </div>
-                </div>
-                <br>
-                <div class="d-flex pt-1">
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="edit_by_customer?user_id=<%=list.getUser_id()%>" type="button" class="btn btn-outline-primary me-1 flex-grow-1">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="logoutctrl" type="button" class="btn btn-danger flex-grow-1">logout</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 	
 	
 	<%-- hii
@@ -90,7 +106,7 @@
 	
 	
 	<section style="background-color: #eee;">
-  <div class="container py-5">
+  <div style="margin-left: 6cm;margin-right: 6cm;">
     <div class="row">
       <div class="col">
         <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
@@ -110,10 +126,10 @@
             <img src="get_profile_image?user_id=<%=list.getUser_id()%>" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3"><%=list.getName()%></h5>
-            <p class="text-muted mb-1">Jain Provision Customer</p>
+            <p class="text-muted mb-1">Bringit</p>
             <p class="text-muted mb-4">Golden Customer</p>
             <div class="d-flex justify-content-center mb-2">
-              <a href="edit_by_customer?user_id=<%=list.getUser_id()%>"type="button" class="btn btn-primary">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="edit_by_customer?user_id=<%=list.getUser_id()%>"type="button" class="btn btn-primary flex-grow-1">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="logoutctrl" type="button" class="btn btn-danger flex-grow-1">logout</a>
             </div>
           </div>
@@ -214,12 +230,18 @@
               <div class="card-body">
                 <p class="mb-4"><span class="text-primary font-italic me-1">MY ORDER </span> Status
                 </p>
-                <a href="view_customer_order?customer_id=<%=list.getUser_id()%>" class="btn btn-success">Current orders</a>
-                 <a href="view_deliverd_customer_order?customer_id=<%=list.getUser_id()%>" class="btn btn-primary">Deliverd Order</a>
-                
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="view_customer_order?customer_id=<%=list.getUser_id()%>" class="btn btn-warning flex-grow-1" >Current orders</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <a href="view_deliverd_customer_order?customer_id=<%=list.getUser_id()%>" class="btn btn-primary flex-grow-1">Deliverd Order</a>
+                 
+               <hr>
+
+<a href="view_customer_order_by_image?customer_id=<%=list.getUser_id()%>" style="text-decoration: none;" class="button-75" role="button"><span class="text">Orders By Image</span></a>
+
               </div>
             </div>
           </div>
+          
+          
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
@@ -237,9 +259,9 @@
  -->				
  <input type = "password" id = "pswd" value = ""  placeholder="Enter your old password">   
 <span id = "message" style="color:red"> </span> <br><br>       
-				    <input type = "submit" value = "Submit">  
-				      <span role="alert" id="nameError" aria-hidden="true">
-    Please enter old password
+				    <input type = "submit" class="btn btn-success" value = "Submit">  
+				      <span role="alert" style="color: red;font-weight: 500" id="nameError" aria-hidden="true">
+    Please enter old password *****
   </span>
   
 				      
@@ -251,10 +273,10 @@
 			<form action="otp_generator_for_update_password?user_id=<%=list.getUser_id()%>" method="post" >
 				<div class="form-group">
 					<label for="exampleInputEmail1">Enter your email address and we will send you a link to reset your password.</label>
-					<input type="email" class="form-control form-control-sm" placeholder="Enter your email address" name="email_id">
+					<input type="email" class="form-control form-control-sm" value="<%=aa.getEmail_id() %>" placeholder="Enter your email address" name="email_id" readonly="readonly" style="font-size: 1000;font-size: 0.5cm;">
 				</div>
 
-				<button type="submit" class="btn btn-primary btn-block">Send password reset email</button>
+				<button type="submit" class="btn btn-success btn-block">Send password reset email</button>
 			</form>
 		</div>
 	</div>
