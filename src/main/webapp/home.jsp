@@ -2105,11 +2105,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Moong Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 100</h6>
 								</div>
 							</div>
 						</div>
@@ -2138,9 +2138,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Massor Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
 									<h6 class="mb-3">$61.99</h6>
 								</div>
@@ -2170,9 +2170,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Chana Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
 									<h6 class="mb-3">
 										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
@@ -2207,9 +2207,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Moong Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
 									<h6 class="mb-3">
 										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
@@ -2238,9 +2238,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Urad Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
 									<h6 class="mb-3">$61.99</h6>
 								</div>
@@ -2272,9 +2272,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Massor Dal</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>	Dal & Grains</p>
 									</a>
 									<h6 class="mb-3">
 										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
@@ -2318,11 +2318,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Swadist Oil 1L</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Oil & Ghee</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 101</h6>
 								</div>
 							</div>
 						</div>
@@ -2351,11 +2351,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Swadist refined 15 L</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Oil & Ghee</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 1500</h6>
 								</div>
 							</div>
 						</div>
@@ -2382,12 +2382,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Sarso Oil</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Oil & Ghee</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>Rs 150</s><strong class="ms-2 text-danger">Rs 110</strong>
 									</h6>
 								</div>
 							</div>
@@ -2419,12 +2419,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Fortune Rice Bran Oil</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Oil & Ghee</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>Rs 200</s><strong class="ms-2 text-danger">Rs 170</strong>
 									</h6>
 								</div>
 							</div>
@@ -2450,11 +2450,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Sunflower oil 1L</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Oil & Ghee</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 150 </h6>
 								</div>
 							</div>
 						</div>
@@ -2484,12 +2484,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Fortune Refined Oil 15L</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>Rs 1700</s><strong class="ms-2 text-danger">Rs 1500</strong>
 									</h6>
 								</div>
 							</div>
@@ -3514,7 +3514,7 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Dustbin Bag</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
@@ -3547,7 +3547,7 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Dustbin</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
@@ -3579,7 +3579,7 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Viper</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
@@ -3616,7 +3616,7 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Zhadu</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
@@ -3647,7 +3647,7 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Cleaner</h5>
 									</a> <a href="" class="text-reset">
 										<p>Category</p>
 									</a>
@@ -3681,9 +3681,9 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Odonil Fresher</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Freshners</p>
 									</a>
 									<h6 class="mb-3">
 										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
@@ -3727,11 +3727,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Loose Sugar (S)</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 40</h6>
 								</div>
 							</div>
 						</div>
@@ -3760,11 +3760,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Loose Sugar (M)</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 42</h6>
 								</div>
 							</div>
 						</div>
@@ -3791,12 +3791,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Loose Sugar (L)</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>Rs 60 </s><strong class="ms-2 text-danger">Rs 45</strong>
 									</h6>
 								</div>
 							</div>
@@ -3828,12 +3828,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Madhr Sugar 1kg</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>rs 80</s><strong class="ms-2 text-danger">Rs 40</strong>
 									</h6>
 								</div>
 							</div>
@@ -3859,11 +3859,11 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Goodlife Suagr 1kg</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
-									<h6 class="mb-3">$61.99</h6>
+									<h6 class="mb-3">Rs 50</h6>
 								</div>
 							</div>
 						</div>
@@ -3893,12 +3893,12 @@ translateX
 								</div>
 								<div class="card-body">
 									<a href="" class="text-reset">
-										<h5 class="card-title mb-3">Product name</h5>
+										<h5 class="card-title mb-3">Madhr Sugar 5 kg</h5>
 									</a> <a href="" class="text-reset">
-										<p>Category</p>
+										<p>Sugar & jaggery</p>
 									</a>
 									<h6 class="mb-3">
-										<s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+										<s>Rs </s><strong class="ms-2 text-danger">Rs 245</strong>
 									</h6>
 								</div>
 							</div>

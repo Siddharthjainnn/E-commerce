@@ -67,7 +67,7 @@ public class confirm_order_bt_admin extends HttpServlet {
 	    Session session = Session.getInstance(properties, new Authenticator() {
 	        @Override
 	        protected PasswordAuthentication getPasswordAuthentication() {
-	            return new PasswordAuthentication("siddhujain1208@outlook.com","Siddharthjain123@...11");
+	            return new PasswordAuthentication("siddhujain1208@outlook.com","Siddharthjain123@...");
 	        }
 	    });
 

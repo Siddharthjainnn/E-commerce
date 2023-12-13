@@ -33,7 +33,7 @@ String email_id=request.getParameter("email_id");
 		String user_id=request.getParameter("user_id");
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password="Siddharthjain123@...11";
+		String password="Siddharthjain123@....";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();

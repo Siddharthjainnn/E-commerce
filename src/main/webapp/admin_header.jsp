@@ -31,19 +31,19 @@ response.setHeader("pragma", "no-cache");
 response.setHeader("expire", "0");
 %>
 
-<header class="header-main" >
+<header class="header-main" style="background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);">
 		<div class="header-logo">
 			<i class="fa-solid fa-bag-shopping icon"></i>
-			<h2>BringIt</h2>
+			<h2 style="color: white;">BringIt</h2>
 		</div>
 		<div class="header-nav">
 			<nav>
-				<li><a href="#home-page">Home</a></li>
-				<li><a href="#features-section">Feature</a></li>
-				<li><a href="#product-section">Product</a></li>
-				<li><a href="#categoris-section" >Catigoris</a></li>
-				<li><a href="#review-section">Review</a></li>
-				<li><a href="#blogs-section">Blogs</a></li>
+				<li ><a href="#home-page" style="color: white;">Add Product</a></li>
+				<li><a href="#features-section" style="color: white;">Review</a></li>
+				<li><a href="#product-section" style="color: white;"> Current Orders</a></li>
+				<li><a href="#categoris-section" style="color: white;" >Deliverd Order</a></li>
+				<li><a href="#review-section" style="color: white;">New Customer</a></li>
+				<li><a href="#blogs-section" style="color: white;">Photo Orders</a></li>
 				
 			</nav>
 		</div>

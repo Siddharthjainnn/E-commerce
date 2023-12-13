@@ -38,7 +38,7 @@ public class otp_generator extends HttpServlet {
 		
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password="Siddharthjain123@...11";
+		String password="Siddharthjain123@....";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();

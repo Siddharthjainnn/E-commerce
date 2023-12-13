@@ -32,7 +32,7 @@ public class otp_send_for_forgooton_password extends HttpServlet {
 		String user_id=request.getParameter("user_id");
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password="Siddharthjain123@...11";
+		String password="Siddharthjain123@....";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();
@@ -67,8 +67,8 @@ public class otp_send_for_forgooton_password extends HttpServlet {
 		  
 			
 			
-			  String msgg=".....WELCOME TO JAIN PROVISION STORE ....." +
-			  " YOUR ONE TIME PASSWORD TO CHANGE PASSWORD ::=>  "+otp2;
+			  String msgg=".....WELCOME TO BRINGIT ....." +
+			  " YOUR ONE TIME OTP TO CHANGE PASSWORD ::=>  "+otp2;
 			
 			 
 		  System.out.println(otp);
@@ -89,7 +89,7 @@ public class otp_send_for_forgooton_password extends HttpServlet {
 		  
 		  
 		 
-	String aa=	model.sendEmail(session,emailID,torecipt,"JAIN PROVISON STORE YOUR ONE TIME PASSWORD TO CHANGE PASSWORD IS",msgg);
+	String aa=	model.sendEmail(session,emailID,torecipt,"BRINGIT - YOUR ONE TIME OTP TO CHANGE PASSWORD IS = ",msgg);
 	new_customer_add jk=model.get_all_customer_details(user_id);
 	if(aa!=null)
 	{

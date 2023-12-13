@@ -58,7 +58,7 @@ public class new_customer_add_please extends HttpServlet {
 		admin_model model=new admin_model();
 		System.out.println("simpleEmail Start");
 		String emailID="siddhujain1208@outlook.com";
-		String password2="Siddharthjain123@...";
+		String password2="Siddharthjain123@....";
 		String torecipt=email_id;
 		
 		Properties props =System.getProperties();
@@ -80,14 +80,14 @@ public class new_customer_add_please extends HttpServlet {
 		System.out.println("jjjjj");
 		
 		
-		  		  String msgg=".....WELCOME TO JAIN PROVISION STORE ....."
-		  		+ " Welcome To Jain Provision ! "+name+"your user_id"
-		  				+ "USER_ID ="+user_id;
+		  		  String msgg="Hello "+name+ 
+		  		"your user Bringit Id is = "
+		  				+user_id;
 		  
 		  
 		  
 		 
-	String aa=	model.sendreviewEmail(session,emailID,torecipt,"THANKYOU FOR CREATING AN ACCOUNT IN JAIN PROVISION",msgg);
+	String aa=	model.sendreviewEmail(session,emailID,torecipt,"THANKYOU FOR CREATING AN ACCOUNT IN BRINGIT YOUR BRINGIT ID IS  ",msgg);
 		int kl=model.add_cu(name,user_id,email_id,phone,password,repassword ,adress,city,zip,gender,occupation,dob,notes,updates,offer,dailyupdate,im);
 		RequestDispatcher rd=request.getRequestDispatcher("create_now.jsp");
 		if(kl!=0)

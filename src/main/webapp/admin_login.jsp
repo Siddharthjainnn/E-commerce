@@ -39,7 +39,7 @@ margin: 2.5cm;
 </style>
 </head>
 <body>
-	<section class="vh-100">
+	<section class="vh-100" style="margin-top: 7.5cm;">
 		<div class="container-fluid h-custom">
 			<div
 				class="row d-flex justify-content-center align-items-center h-100">
@@ -52,7 +52,7 @@ margin: 2.5cm;
 					<form action="admin_loginctrl" method="post" >
 						<div
 							class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-							<p class="lead fw-normal mb-0 me-3">WELCOME TO JAIN PROVISION LOGIN</p>
+							<p class="lead fw-normal mb-0 me-3" style="font-weight: 1000;font-size: 30px;">Welcome To BringIt Admin Login Login</p>
 							
 						</div>
 
@@ -91,7 +91,7 @@ margin: 2.5cm;
 								style="padding-left: 2.5rem; padding-right: 2.5rem;">
 								Login</button>
 													</div>
-<div><a href="create_admin.jsp" class="btn btn-primary">create account</a></div>
+<!-- <div><a href="create_admin.jsp" class="btn btn-primary">create account</a></div> -->
 					</form>
 				</div>
 			</div>
@@ -100,10 +100,10 @@ margin: 2.5cm;
 		
 		</pre>
 		<div
-			class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+			class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary" style="background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);">
 			<!-- Copyright -->
 			<div class="text-white mb-3 mb-md-0">Copyright © 2023. All
-				rights reserved Jain Provision.</div>
+				rights reserved BringIt.</div>
 			<!-- Copyright -->
 
 			<!-- Right -->

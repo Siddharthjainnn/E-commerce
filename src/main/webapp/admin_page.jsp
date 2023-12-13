@@ -487,7 +487,7 @@ if(lk!=null)
  <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">JAIN's MART</span>
+      <span class="logo_name">BringIt</span>
     </div>
       <ul class="nav-links">
         <li>
@@ -824,6 +824,8 @@ if(lk!=null)
         </div>
       </div>
     </div>
+    
+    
   </section>
   <script>
    let sidebar = document.querySelector(".sidebar");
